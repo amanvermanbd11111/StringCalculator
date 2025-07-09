@@ -17,6 +17,10 @@ void main() {
     test('Two numbers comma separated', () {
       expect(add('1,2'), equals(3));
     });
+
+    test('Handle new lines between numbers', () {
+      expect(add('1\n2,3'), equals(6));
+    });
     
 
   });

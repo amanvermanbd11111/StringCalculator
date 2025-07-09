@@ -26,5 +26,10 @@ void main() {
       expect(add('//;\n1;2'), equals(3));
     });
 
+    test('Multiple negative numbers in exception', () {
+      expect(() => add('1,-2,-3,4'), throwsA(predicate((e) =>
+      e is Exception && e.toString().contains('negative numbers not allowed -2,-3'))));
+    });
+
   });
 }

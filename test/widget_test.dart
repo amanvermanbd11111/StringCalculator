@@ -14,6 +14,9 @@ void main() {
     test('Single number returns itself', () {
       expect(add('1'), equals(1));
     });
+    test('Two numbers comma separated', () {
+      expect(add('1,2'), equals(3));
+    });
     
 
   });
